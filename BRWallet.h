@@ -35,7 +35,7 @@
 extern "C" {
 #endif
 
-#define DEFAULT_FEE_PER_KB 1000000ULL  // 0.01 CHA/kb
+#define DEFAULT_FEE_PER_KB 100000ULL   // 0.001 CHA (Old "Chaucha Classic" format)
 #define MIN_FEE_PER_KB     100000ULL   // 0.001 CHA
 #define MAX_FEE_PER_KB     10000000ULL // 0.1 CHA
 
