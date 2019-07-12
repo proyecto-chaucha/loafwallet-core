@@ -1146,10 +1146,9 @@ static void _peerRejectedTx(void *info, UInt256 txHash, uint8_t code)
 
 static int _BRPeerManagerVerifyBlock(BRPeerManager *manager, BRMerkleBlock *block, BRMerkleBlock *prev, BRPeer *peer)
 {
-    /*
     uint32_t transitionTime = 0;
     int r = 1;
-    
+
     // check if we hit a difficulty transition, and find previous transition time
     if ((block->height % BLOCK_DIFFICULTY_INTERVAL) == 0) {
         BRMerkleBlock *b = block;
@@ -1186,7 +1185,7 @@ static int _BRPeerManagerVerifyBlock(BRPeerManager *manager, BRMerkleBlock *bloc
                  u256_hex_encode(block->blockHash));
         r = 0;
     }
-    
+
     if (r) {
         BRMerkleBlock *checkpoint = BRSetGet(manager->checkpoints, block);
 
@@ -1200,8 +1199,6 @@ static int _BRPeerManagerVerifyBlock(BRPeerManager *manager, BRMerkleBlock *bloc
     }
 
     return r;
-        */
-    return 1;
 }
 
 static void _peerRelayedBlock(void *info, BRMerkleBlock *block)
