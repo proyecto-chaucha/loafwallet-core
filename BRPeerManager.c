@@ -1150,7 +1150,7 @@ static int _BRPeerManagerVerifyBlock(BRPeerManager *manager, BRMerkleBlock *bloc
     int r = 1;
 
     // check if we hit a difficulty transition, and find previous transition time
-    if ((block->height % BLOCK_DIFFICULTY_INTERVAL) == 0) {
+    if (block->height < 127000 && ((block->height % BLOCK_DIFFICULTY_INTERVAL) == 0)) {
         BRMerkleBlock *b = block;
         UInt256 prevBlock;
 
